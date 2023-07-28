@@ -4,16 +4,19 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const Left = () => {
+const Right = () => {
   return (
     <Main>
       <ContainerMain>
         <Container fluid>
           <Row>
+            <Col style={{ alignItems: "center", display: "flex" }}>
+              <img src="success.jpg" style={{ height: "90%" }} />
+            </Col>
             <Col className="flex" style={{ alignItems: "center" }}>
               <div>
                 <h1>
-                  Lets Turn Your <span>IDEAS</span> Into a Solution
+                  Your <span>SUCCESS</span> Is Our Focus
                 </h1>
                 <p style={{ margin: "1.5rem 0" }}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -24,9 +27,6 @@ const Left = () => {
                 <Button>Connect With Us!</Button>
               </div>
             </Col>
-            <Col style={{ alignItems: "center", display: "flex" }}>
-              <img src="1.jpg" style={{ height: "90%" }} />
-            </Col>
           </Row>
         </Container>
       </ContainerMain>
@@ -34,7 +34,7 @@ const Left = () => {
   );
 };
 
-export default Left;
+export default Right;
 
 const Button = styled.div`
   cursor: pointer;
@@ -46,7 +46,7 @@ const ContainerMain = styled.div`
   width: 90%;
   height: 90%;
   h1 {
-    font-size: 2.7rem;
+    font-size: 2.9rem;
     font-weight: 600;
     color: #1f76fc;
   }
@@ -62,5 +62,5 @@ const Main = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9fa;
+  margin-top: 3rem;
 `;

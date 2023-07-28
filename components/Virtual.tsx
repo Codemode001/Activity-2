@@ -13,9 +13,9 @@ const Virtual = () => {
   return (
     <Main>
       <ContainerMain>
-        <Container fluid>
+        <Container fluid style={{ padding: 0 }}>
           <Row>
-            <Col className="flex justify-center" xs={12} lg={4} md={6}>
+            <Col className="flex justify-center" xs={12} lg={4}>
               <Card
                 style={{
                   width: "90%",
@@ -50,7 +50,7 @@ const Virtual = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col className=" flex justify-center" xs={12} lg={4} md={6}>
+            <Col className=" flex justify-center" xs={12} lg={4}>
               <Card
                 style={{
                   width: "90%",
@@ -85,7 +85,7 @@ const Virtual = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col className=" flex justify-center" xs={12} lg={4} md={6}>
+            <Col className=" flex justify-center" xs={12} lg={4}>
               <Card
                 style={{
                   width: "90%",
@@ -141,5 +141,5 @@ const Main = styled.div`
   height: 40vh;
   display: flex;
   justify-content: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 `;

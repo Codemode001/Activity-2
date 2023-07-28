@@ -112,8 +112,8 @@ const Container = styled.div`
 
 const Main = styled.div`
   background-color: #044556;
-  height: 60vh;
+  height: 100%;
   display: flex;
   justify-content: center;
-  padding: 2rem 0 0 0;
+  padding: 2rem 0 3rem 0;
 `;

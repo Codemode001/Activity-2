@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
- 
 }
 
+span {
+  color: #ffc003;
+}

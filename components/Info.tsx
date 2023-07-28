@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 import Left from "./small/Left";
+import Right from "./small/Right";
 
 const Info = () => {
   return (
     <Main>
       <Container>
         <Left />
+        <Right />
       </Container>
     </Main>
   );
@@ -21,8 +23,9 @@ const Container = styled.div`
 `;
 
 const Main = styled.div`
-  height: 60vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   padding: 2rem 0 0 0;
+  margin-bottom: 20rem;
 `;
