@@ -43,8 +43,9 @@ const Button = styled.div`
 `;
 
 const ContainerMain = styled.div`
-  width: 90%;
+  width: 100%;
   height: 90%;
+  padding: 0;
   h1 {
     font-size: 2.9rem;
     font-weight: 600;
