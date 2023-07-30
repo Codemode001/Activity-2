@@ -3,7 +3,7 @@ import Accordion from "react-bootstrap/Accordion";
 
 const AccordionCom = () => {
   return (
-    <Accordion defaultActiveKey="0" style={{ width: "100%" }}>
+    <Accordion style={{ width: "100%" }}>
       <Accordion.Item eventKey="0">
         <Accordion.Header>
           What kind of IDEAS are you looking for?
