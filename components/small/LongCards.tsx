@@ -6,9 +6,11 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
+import { media } from "@/constant/mediaQuery";
+
 const LongCards = ({ title, image }: { title: string; image: string }) => {
   return (
-    <Card style={{ width: "18rem", height: "30rem" }}>
+    <Card style={{ width: "100%", height: "30rem", margin: "1rem 0" }}>
       <Card.Body>
         <div
           style={{
@@ -17,17 +19,19 @@ const LongCards = ({ title, image }: { title: string; image: string }) => {
             flexDirection: "column",
           }}
         >
-          <Card.Img
-            variant="top"
-            src={image}
-            style={{
-              borderRadius: "50%",
-              width: "60%",
-              marginBottom: "1rem",
-              height: "9rem",
-              objectFit: "cover",
-            }}
-          />
+          <ImageContainer>
+            <Card.Img
+              variant="top"
+              src={image}
+              style={{
+                borderRadius: "50%",
+                marginBottom: "1rem",
+                height: "9rem",
+                objectFit: "cover",
+              }}
+              className="image"
+            />
+          </ImageContainer>
           <Card.Title className="text-3xl">{title}</Card.Title>
         </div>
         <Card.Text
@@ -49,6 +53,22 @@ const LongCards = ({ title, image }: { title: string; image: string }) => {
 };
 
 export default LongCards;
+
+const ImageContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  ${media.up("small")} {
+    width: 30%;
+  }
+  ${media.up("medium")} {
+    width: 50%;
+  }
+  ${media.up("large")} {
+    width: 60%;
+  }
+`;
 
 const IconsContainer = styled.div`
   height: 10%;

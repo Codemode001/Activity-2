@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 import LongCards from "./small/LongCards";
 
 const cardsProfile = [
@@ -33,14 +34,19 @@ const Admin = () => {
     <Main>
       <ContainerMain>
         <h1>The Administrators</h1>
-        <p>
+        <p className="text-center">
           Our administrators are experts in the field of business and
           technologies with 5 years of experience
         </p>
         <Container style={{ marginTop: "3rem" }}>
           <Row>
             {cardsProfile.map((item) => (
-              <Col lg={3} md={6} xs={12}>
+              <Col
+                lg={3}
+                md={6}
+                xs={12}
+                style={{ display: "flex", justifyContent: "center" }}
+              >
                 <LongCards title={item.title} image={item.image} />
               </Col>
             ))}
