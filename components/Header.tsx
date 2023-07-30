@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import MenuIcon from "@mui/icons-material/Menu";
+
+import { media } from "@/constant/mediaQuery";
 
 function MyVerticallyCenteredModal(props: any) {
   return (
@@ -34,6 +37,9 @@ function MyVerticallyCenteredModal(props: any) {
 const Header = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
+  const handleBurgerMenuClick = () => {
+    setModalShow(true);
+  };
   return (
     <Main>
       <Container>
@@ -42,7 +48,12 @@ const Header = () => {
           style={{ fontSize: "1.2rem", fontWeight: "400" }}
         >
           <div>USTP CONeXT</div>
-          <ul className="flex" style={{ gap: "1rem" }}>
+
+          <BurgerMenuButton onClick={handleBurgerMenuClick}>
+            <MenuIcon />
+          </BurgerMenuButton>
+
+          <ul className="flex default-nav" style={{ gap: "1rem" }}>
             <li>About Us</li>
             <li>FAQ</li>
             <li>Administrators</li>
@@ -50,7 +61,7 @@ const Header = () => {
         </div>
         <Connected>
           <div
-            className=" w-[40%] flex"
+            className=" flex text"
             style={{
               flexDirection: "column",
               justifyContent: "center",
@@ -58,15 +69,16 @@ const Header = () => {
             }}
           >
             <h1>Get Connected to The Next Generation</h1>
-            <div style={{ fontSize: "1.2rem" }}>
+            <p style={{ margin: "1rem 0" }}>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
               voluptate natus libero eos iure blanditiis illum! Dolor obcaecati
               facilis iusto!
-            </div>
+            </p>
             <Button
               variant="primary"
               onClick={() => setModalShow(true)}
-              style={{ backgroundColor: "white", color: "black", width: "30%" }}
+              style={{ backgroundColor: "white", color: "black" }}
+              className="button"
             >
               Connect With Us
             </Button>
@@ -76,9 +88,8 @@ const Header = () => {
               onHide={() => setModalShow(false)}
             />
           </div>
-
-          <div className="w-[60%]  flex items-center">
-            <Image src="header-img.png" />
+          <div className=" flex items-center image">
+            <Image src="header-img.png" className="image-control" />
           </div>
         </Connected>
       </Container>
@@ -87,6 +98,15 @@ const Header = () => {
 };
 
 export default Header;
+
+const BurgerMenuButton = styled.button`
+  ${media.up("small")} {
+    display: block;
+  }
+  ${media.up("large")} {
+    display: none;
+  }
+`;
 
 const Image = styled.img`
   width: 60%;
@@ -98,9 +118,72 @@ const Connected = styled.div`
   margin-top: 2rem;
   display: flex;
 
-  h1 {
-    font-size: 3rem;
-    font-weight: 600;
+  ${media.up("small")} {
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .image {
+      display: none;
+    }
+    .text {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  ${media.up("medium")} {
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+    }
+    .text {
+      width: 50%;
+      display: block;
+      text-align: left;
+    }
+    .image-control {
+      width: 100%;
+    }
+  }
+
+  ${media.up("large")} {
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: white;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    .image {
+      display: block;
+      width: 60%;
+    }
+    .text {
+      width: 40%;
+      text-align: left;
+      display: flex;
+      align-items: start;
+    }
+    .image-control {
+      width: 70%;
+    }
   }
 `;
 
@@ -108,6 +191,18 @@ const Container = styled.div`
   width: 80%;
   color: white;
   cursor: default;
+
+  
+
+  ${media.up("small")} {
+    .default-nav {
+      display: none;
+    }
+  }
+  ${media.up("large")} {
+    .default-nav {
+      display: flex;
+    }
 `;
 
 const Main = styled.div`

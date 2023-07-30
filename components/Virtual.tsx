@@ -138,8 +138,8 @@ const ContainerMain = styled.div`
 `;
 
 const Main = styled.div`
-  height: 40vh;
+  height: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 `;
