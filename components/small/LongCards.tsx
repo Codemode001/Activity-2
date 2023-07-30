@@ -62,6 +62,9 @@ const ImageContainer = styled.div`
   ${media.up("small")} {
     width: 30%;
   }
+  ${media.up("small")} {
+    width: 30%;
+  }
   ${media.up("medium")} {
     width: 50%;
   }
