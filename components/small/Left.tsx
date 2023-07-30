@@ -4,13 +4,20 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import { media } from "@/constant/mediaQuery";
+
 const Left = () => {
   return (
     <Main>
       <ContainerMain>
         <Container fluid>
           <Row>
-            <Col className="flex" style={{ alignItems: "center" }}>
+            <Col
+              sm={12}
+              md={6}
+              className="flex"
+              style={{ alignItems: "center" }}
+            >
               <div>
                 <h1>
                   Lets Turn Your <span>IDEAS</span> Into a Solution
@@ -24,8 +31,12 @@ const Left = () => {
                 <Button>Connect With Us!</Button>
               </div>
             </Col>
-            <Col style={{ alignItems: "center", display: "flex" }}>
-              <img src="1.jpg" style={{ height: "90%" }} />
+            <Col
+              sm={12}
+              md={6}
+              style={{ alignItems: "center", display: "flex" }}
+            >
+              <img src="1.jpg" style={{ height: "90%", objectFit: "cover" }} />
             </Col>
           </Row>
         </Container>
@@ -63,4 +74,15 @@ const Main = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #f8f9fa;
+
+  ${media.up("small")} {
+    img {
+      display: none;
+    }
+  }
+  ${media.up("medium")} {
+    img {
+      display: flex;
+    }
+  }
 `;

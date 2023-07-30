@@ -4,12 +4,18 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
+import { media } from "@/constant/mediaQuery";
+
 const Subscribe = () => {
   return (
     <Main>
       <h1
         className="w-[50%] flex"
-        style={{ justifyContent: "center", alignItems: "center" }}
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
       >
         Sign Up For Constant Notification
       </h1>
@@ -31,7 +37,6 @@ const Subscribe = () => {
           </Button>
         </InputGroup>
       </div>
-      {/* <div className="bg-red-500 w-[30%]">asf</div> */}
     </Main>
   );
 };
@@ -43,10 +48,24 @@ const Main = styled.div`
   height: 10rem;
   display: flex;
 
-  h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: white;
-    letter-spacing: 1px;
+  ${media.up("small")} {
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 1px;
+    }
+  }
+
+  ${media.up("medium")} {
+  }
+
+  ${media.up("large")} {
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 1px;
+    }
   }
 `;

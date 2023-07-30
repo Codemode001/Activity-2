@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AccordionCom from "./small/Accordion";
+import { media } from "@/constant/mediaQuery";
 
 const FAQ = () => {
   return (
@@ -21,10 +22,19 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  h1 {
-    font-size: 2.8rem;
-    font-weight: 600;
-    margin-bottom: 4rem;
+  ${media.up("small")} {
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 4rem;
+    }
+  }
+  ${media.up("medium")} {
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 4rem;
+    }
   }
 `;
 
