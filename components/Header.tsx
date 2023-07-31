@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import MenuIcon from "@mui/icons-material/Menu";
+import Link from "next/link";
 
 import { media } from "@/constant/mediaQuery";
 
@@ -60,6 +61,9 @@ const Header = () => {
             <li>FAQ</li>
             <li>Administrators</li>
           </ul>
+        </div>
+        <div>
+          <Link href="/hello-user">login</Link>
         </div>
         <Connected>
           <div
