@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import ConfettiExplosion from "react-confetti-explosion";
 
 import "../app/globals.css";
 
 const Hello = () => {
   const router = useRouter();
+  const [isExploding, setIsExploding] = React.useState(true);
   return (
     <Main>
+      {isExploding && <ConfettiExplosion />}
       <h1>
         Welcome! <span style={{ color: "#044556" }}>{router.query.name}</span>
       </h1>

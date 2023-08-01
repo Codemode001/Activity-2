@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^3.1.1",
+    "@mui/icons-material": "^5.0.0",
+    "@mui/material": "^5.0.0",
     "@types/node": "20.4.5",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
@@ -23,16 +27,13 @@
     "react": "18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-confetti": "^6.1.0",
+    "react-confetti-explosion": "^2.1.2",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.2",
     "react-use": "^17.4.0",
     "styled-components": "^6.0.5",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6",
-    "yup": "^1.2.0",
-    "@mui/material": "^5.0.0",
-    "@mui/icons-material": "^5.0.0",
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0"
+    "yup": "^1.2.0"
   }
 }
