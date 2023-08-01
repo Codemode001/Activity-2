@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import Confetti from "react-confetti";
 
 import "../app/globals.css";
 
 const Success = () => {
   return (
     <Main>
+      <Confetti style={{ width: "100%" }} />
       <h1>
-        Login <span style={{ color: "#044556" }}>SUCCESS</span>
+        REGISTRATION <span style={{ color: "#044556" }}>SUCCESS</span>
       </h1>
       <Link href="/">
         <Button>Want to login?</Button>
