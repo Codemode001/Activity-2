@@ -37,7 +37,7 @@ const Virtual = () => {
                   </div>
                   <Card.Text style={{ fontSize: ".8rem", textAlign: "center" }}>
                     Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    up the bulk of the card&apos;s content.
                   </Card.Text>
                   <div className="flex justify-center">
                     <Button
@@ -72,7 +72,7 @@ const Virtual = () => {
                   </div>
                   <Card.Text style={{ fontSize: ".8rem", textAlign: "center" }}>
                     Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    up the bulk of the card&apos;s content.
                   </Card.Text>
                   <div className="flex justify-center">
                     <Button
@@ -107,7 +107,7 @@ const Virtual = () => {
                   </div>
                   <Card.Text style={{ fontSize: ".8rem", textAlign: "center" }}>
                     Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    up the bulk of the card&apos;s content.
                   </Card.Text>
                   <div className="flex justify-center">
                     <Button
