@@ -46,6 +46,7 @@ const Admin = () => {
                 md={6}
                 xs={12}
                 style={{ display: "flex", justifyContent: "center" }}
+                key={item.title}
               >
                 <LongCards title={item.title} image={item.image} />
               </Col>
