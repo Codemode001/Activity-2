@@ -3,13 +3,36 @@ import styled from "styled-components";
 import "../app/globals.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { useRouter } from "next/router";
 
 const Login = () => {
+  const router = useRouter();
+
+  console.log(router);
+
+  const loginAccount = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const data: any = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    const email = formData.get("email") as string;
+    const password = formData.get("Password") as string;
+
+    if (email === router.query.email && password === router.query.pass) {
+      router.push("/hello-user");
+    } else {
+      window.alert("User not Found");
+    }
+  };
+
   return (
     <Main>
       <Container>
         <Header>LOGIN</Header>
-        <Body>
+        <Body onSubmit={loginAccount}>
           <Form.Group
             className="mb-3 w-full"
             controlId="exampleForm.ControlInput1"
@@ -18,6 +41,7 @@ const Login = () => {
               className="w-full"
               type="email"
               placeholder="Email"
+              name="email"
               style={{
                 height: "3rem",
                 padding: "0 1rem 0 1rem",
@@ -33,8 +57,9 @@ const Login = () => {
           >
             <Form.Control
               className="w-full"
-              type="email"
+              type="text"
               placeholder="Password"
+              name="Password"
               style={{
                 height: "3rem",
                 padding: "0 1rem 0 1rem",
@@ -56,7 +81,7 @@ const Login = () => {
               marginTop: "2rem",
             }}
           >
-            Submit
+            Login
           </Button>
         </Body>
         <div className="cursor-pointer">forgot password</div>

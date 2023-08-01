@@ -2,19 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import Confetti from "react-confetti";
+import { useRouter } from "next/router";
 
 import "../app/globals.css";
 
 const Success = () => {
+  const router = useRouter();
+  console.log(router);
+
+  function pushData() {
+    router.push({
+      pathname: "/login",
+      query: {
+        email: router.query.email,
+        pass: router.query.password,
+      },
+    });
+  }
   return (
     <Main>
       <Confetti style={{ width: "100%" }} />
       <h1>
         REGISTRATION <span style={{ color: "#044556" }}>SUCCESS</span>
       </h1>
-      <Link href="/login">
-        <Button>Want to login?</Button>
-      </Link>
+
+      <Button onClick={pushData}>Want to login?</Button>
     </Main>
   );
 };
