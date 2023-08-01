@@ -12,7 +12,7 @@ const Success = () => {
       <h1>
         REGISTRATION <span style={{ color: "#044556" }}>SUCCESS</span>
       </h1>
-      <Link href="/">
+      <Link href="/login">
         <Button>Want to login?</Button>
       </Link>
     </Main>
@@ -34,6 +34,7 @@ const Button = styled.button`
 
   &:hover {
     background-color: #0275d8;
+    scale: 1.2;
   }
 `;
 

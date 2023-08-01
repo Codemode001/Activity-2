@@ -126,7 +126,13 @@ function MyVerticallyCenteredModal(props: any) {
             className="flex justify-center"
             style={{ margin: "2rem 0 1rem 0" }}
           >
-            <Submit type="submit">Submit</Submit>
+            <Button
+              id="button-addon2"
+              type="submit"
+              style={{ backgroundColor: "#0d6efd", color: "white" }}
+            >
+              Submit
+            </Button>
           </div>
         </form>
       </Modal.Body>
@@ -207,16 +213,6 @@ const Header = () => {
 };
 
 export default Header;
-
-const Submit = styled.button``;
-
-const PassWord = styled.input`
-  border: 1px solid gray;
-  width: 100%;
-  height: 3rem;
-  padding: 0 1rem;
-  border-radius: 5px;
-`;
 
 const BurgerMenuButton = styled.button`
   ${media.up("small")} {
