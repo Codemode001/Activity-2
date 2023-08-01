@@ -16,6 +16,7 @@ const Success = () => {
       query: {
         email: router.query.email,
         pass: router.query.password,
+        name: router.query.name,
       },
     });
   }

@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import "../app/globals.css";
 
 const Hello = () => {
+  const router = useRouter();
   return (
     <Main>
       <h1>
-        Welcome! <span style={{ color: "#044556" }}>USER</span>
+        Welcome! <span style={{ color: "#044556" }}>{router.query.name}</span>
       </h1>
       <Link href="/">
         <Button>PROCEED</Button>

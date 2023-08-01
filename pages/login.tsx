@@ -22,7 +22,12 @@ const Login = () => {
     const password = formData.get("Password") as string;
 
     if (email === router.query.email && password === router.query.pass) {
-      router.push("/hello-user");
+      router.push({
+        pathname: "/hello-user",
+        query: {
+          name: router.query.name,
+        },
+      });
     } else {
       window.alert("User not Found");
     }

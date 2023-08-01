@@ -26,11 +26,13 @@ function CenteredModal(props: any) {
 
     const password = formData.get("Password") as string;
     const confirmPassword = formData.get("ConfirmPassword") as string;
+    const name = formData.get("firstName") as string;
     const email = formData.get("username") as string;
 
     const queryParams = new URLSearchParams({
       email: email,
       password: password,
+      name: name,
     });
 
     const passwordRegex =
