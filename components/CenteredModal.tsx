@@ -49,7 +49,6 @@ function CenteredModal(props: any) {
     } else {
       setPasswordError(null);
       setPasswordConfirmError(null);
-      window.alert(JSON.stringify(data));
       console.log(JSON.stringify(data));
       router.push(`/success?${queryParams}`);
     }
